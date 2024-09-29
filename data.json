@@ -1,0 +1,77 @@
+[
+    {
+        "model": "products.Category",
+        "pk": 1,
+        "fields":{
+            "title": "Electronics",
+            "is_active": true
+        }
+    },
+    {
+        "model": "products.Category",
+        "pk": 2,
+        "fields":{
+            "title": "Books",
+            "is_active": true
+        }
+    },
+    {
+        "model": "products.Category",
+        "pk": 3,
+        "fields":{
+            "title": "Clothes",
+            "is_active": true
+        }
+    },
+
+    {
+        "model": "products.Product",
+        "pk": 1,
+        "fields":{
+            "title": "Laptop",
+            "description": "A laptop",
+            "price": 1000,
+            "category": 1
+        }
+    },
+    {
+        "model": "products.Product",
+        "pk": 2,
+        "fields":{
+            "title": "hery Potter",
+            "description": "A book",
+            "price": 100,
+            "category": 2
+        }
+    },
+    {
+        "model": "products.Product",
+        "pk": 3,
+        "fields":{
+            "title": "T-shirt",
+            "description": "A t-shirt",
+            "price": 200,
+            "category": 3
+        }
+    },
+    {
+        "model": "products.Product",
+        "pk": 4,
+        "fields":{
+            "title": "Mobile",
+            "description": "A mobile",
+            "price": 500,
+            "category": 1
+        }
+    },
+    {
+        "model": "products.Product",
+        "pk": 5,
+        "fields":{
+            "title": "Pants",
+            "description": "A pants",
+            "price": 300,
+            "category": 3
+        }
+    }
+]
