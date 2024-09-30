@@ -4,16 +4,16 @@ from .models import Product,Category
 # Create your views here.
 def index(request):
     cateries = Category.objects.all()
-    products = Product.objects.all().order_by("price")
+    products = Product.objects.all().order_by("price").select_related("category") #forwad er jonno select_related
 
 
-    #Agrrogration
+    #Aggrogration
     price_avg= products.aggregate(Avg('price'))["price__avg"]
     price_sum= products.aggregate(Sum('price'))["price__sum"]
 
 
-    #Anotate
-    cateries = Category.objects.annotate(product_count=Count('product'))
+    #Annotate
+    cateries = Category.objects.annotate(product_count=Count('product')).prefetch_related("product_set") #Backward er jonno prefetch_related
 
 
     context = {
