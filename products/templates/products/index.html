@@ -6,9 +6,19 @@
     <title>Products</title>
 </head>
 <body>
+    <h1>Categories</h1>
+    <ul>
+        {% for category in categories %}
+            <li>{{ category.title }} ({{ category.product_count}})</li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <h1>Products</h1>
+    <h3>Total Sum Of Produce: {{ price_sum }}</h3>
+    <h3>Average Price: {{ price_avg}}</h3>
     <ul>
         {% for product in products %}
-            <li>{{ product.title }} - {{ product.price }}</li>
+            <li>{{ product.title }} - {{ product.price }} - {{ product.category}}</li>
         {% endfor %}
     </ul>
 </body>
